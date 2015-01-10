@@ -1,0 +1,6 @@
+<%= form_for @user do |u| %>
+	Name: <%= u.text_field :name %>
+	<%= u.submit "Create a new user" %>
+	<% end %>
+
+	<%= link_to "Back to the list", users_path %>
