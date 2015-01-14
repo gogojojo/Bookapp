@@ -1,0 +1,18 @@
+<%= form_for(@user) do |u| %>
+  <%= u.label :name %>
+  <%= u.text_field :name %>
+  <%= u.label :username %>
+  <%= u.text_field :username %>
+  <%= u.label :passwords %>
+  <%= u.text_field :password %>
+  <%= u.label :email %>
+  <%= u.text_field :email %>
+  <%= u.label :age %>
+  <%= u.text_field :age %>
+  <%= u.label :gender %>
+  <%= u.text_field :gender %>
+  <%= u.submit "sumbit" %>
+
+</ul>
+<% end %>
+  

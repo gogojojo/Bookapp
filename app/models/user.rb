@@ -1,6 +1,11 @@
 class User
   include Mongoid::Document
   field :name
-  embeds_one :profile
+  field :username
+  field :password
+  field :email
+  field :age
+  field :gender
+
   has_and_belongs_to_many :books
 end
