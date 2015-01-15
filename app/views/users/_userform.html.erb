@@ -1,18 +1,36 @@
-<%= form_for(@user) do |u| %>
-  <%= u.label :name %>
-  <%= u.text_field :name %>
-  <%= u.label :username %>
-  <%= u.text_field :username %>
-  <%= u.label :passwords %>
-  <%= u.text_field :password %>
-  <%= u.label :email %>
-  <%= u.text_field :email %>
-  <%= u.label :age %>
-  <%= u.text_field :age %>
-  <%= u.label :gender %>
-  <%= u.text_field :gender %>
-  <%= u.submit "sumbit" %>
-
-</ul>
+<%= form_for(@user, :html => {:class => "pure-form pure-form-aligned"}) do |u| %>
+	<fieldset>
+		<div class="pure-control-group">
+		  <%= u.label :name %> 
+		  <%= u.text_field :name %>
+		</div>
+		<div class="pure-control-group">
+		  <%= u.label :username %>
+		  <%= u.text_field :username %>
+		 </div>
+		 <div class="pure-control-group">
+		  <%= u.label :email %>
+		  <%= u.text_field :email %>
+		</div>  
+		<div class="pure-control-group">
+		  <%= u.label :age %>
+		  <%= u.text_field :age %>
+		</div>
+		<div class="pure-control-group">
+		  <%= u.label :gender %>
+		  <%= u.text_field :gender %>
+		</div>
+		<div class="pure-control-group">
+		  <%= u.label :password %>
+		  <%= u.password_field :password %>
+		 </div>
+		 <div class="pure-control-group">
+		  <%= u.label :password_confirmation %>
+		  <%= u.password_field :password_confirmation %>
+		 </div>
+		<div class="button">
+		  <%= u.submit "sumbit", :class =>"pure-button pure-button-primary" %>
+		</div>
+  	</fieldset>
 <% end %>
   

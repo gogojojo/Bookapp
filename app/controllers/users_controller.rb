@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_action :authorize, except: :new
 	def index
  		@users = User.all
  	end
@@ -9,10 +10,10 @@ class UsersController < ApplicationController
  		@user = User.new
  	end
  	def create 
- 		@user = User.new(params.require(:user).permit(:name))
+ 		@user = User.new(params.require(:user).permit(:name, :username, :email, :age, :gender, :password, :password_confirmation))
  		
  		if @user.save
- 			redirect_to users_path
+ 			redirect_to login_path
  		else
  			render "new"
  		end
