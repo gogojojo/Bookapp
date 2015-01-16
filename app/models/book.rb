@@ -5,5 +5,5 @@ class Book
   field :author
   
   has_and_belongs_to_many :users
-  belongs_to :author
+
 end
