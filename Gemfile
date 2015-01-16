@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # installing mongoid for the primary database
 gem 'mongoid', '~> 4.0.0'
 # installing purecss for formatting
-gem 'purecss'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
