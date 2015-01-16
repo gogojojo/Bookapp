@@ -1,0 +1,9 @@
+<%= form_for(@list, :html => {:class => "pure-form pure-form-aligned"}) do |u| %>
+	<fieldset>
+		<div class="pure-control-group">
+		  <%= u.text_field :title %>
+		</div>
+		  <%= u.submit "sumbit", :class =>"pure-button pure-button-primary" %>
+		</div>
+		<% end %>
+  	</fieldset>

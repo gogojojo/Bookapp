@@ -8,6 +8,8 @@ class User
 
   has_and_belongs_to_many :books
 
+  embeds_many :lists
+
   has_secure_password
 
   validates :email, uniqueness: true, presence: true

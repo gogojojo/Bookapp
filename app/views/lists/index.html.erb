@@ -1,0 +1,20 @@
+<body>
+<div id="layout" class="pure-g">
+   <%= render 'users/sidebar' %>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+		<%= current_user.username %>
+
+		<% current_user.lists.each do |l| %>
+			<%= l.title %>
+		<% end %>
+	</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
