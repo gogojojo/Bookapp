@@ -1,5 +1,5 @@
 <h1> Log in </h1>
-<%= form_for :user, url: '/login' do |f| %>
+<%= form_for :user, url: '/login'  do |f| %>
 Email:	<%= f.text_field :email %>
 Password :<%= f.password_field :password %>
 	<%= f.submit "Login" %>

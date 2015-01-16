@@ -10,7 +10,7 @@ class UsersController < ApplicationController
  		@user = User.new
  	end
  	def create 
- 		@user = User.new(params.require(:user).permit(:name, :username, :email, :age, :gender, :password, :password_confirmation))
+ 		@user = User.new(params.require(:user).permit(:name, :username, :email, :password, :password_confirmation))
 
  		if @user.save
  			redirect_to login_path

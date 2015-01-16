@@ -1,2 +1,6 @@
-
-<%= link_to "Create a new user", new_user_path %>
+<%= form_for :user, url: '/login'  do |f| %>
+Email:	<%= f.text_field :email %>
+Password :<%= f.password_field :password %>
+	<%= f.submit "Login" %>
+Hello world
+<% end %>
