@@ -12,16 +12,17 @@
 	                    </li>
 	                </ul>
             <% else %>
-            <h2 class="brand-subtitle"> Log in </h2>
-	            <%= form_for :user, url: '/login'  do |f| %>
-				Email:	<%= f.text_field :email %>
-				Password :<%= f.password_field :password %>
-					<%= f.submit "Login" %>
+	            <%= form_for :user,:html => {:class => 'pure-form'}, url: '/login'  do |f| %>
+	            <fieldset class ='pure-group'>
+					<%= f.text_field :email, placeholder:'email', :class => 'pure-input-1' %>
+					<%= f.text_field :password, placeholder:'password', :class => 'pure-input-1' %>
+				</fieldset>
+					<%= f.submit "Login", :class => "pure-button pure-input-1 pure-button-primary" %>
 				<% end %>
 				<nav class="nav">
 		            <ul class="nav-list">
 		                <li class="nav-item">
-		                    <%= link_to "Sign Up",signup_path,:class => "pure-button" %>
+		                    <%= link_to "Sign Up",signup_path,:class => "pure-button", :id => 'wide'%>
 		                </li>
 	            	</ul>
 	            </nav>
