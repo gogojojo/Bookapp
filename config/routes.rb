@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new', as: :signup
   
   resources :users
-  resources :authors
   resources :books
   resources :lists
 end
