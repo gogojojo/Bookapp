@@ -1,11 +1,33 @@
-<h1> Hello <%= current_user.name %> </h2>
-<h2> Your books</h2>
-<% if current_user.books %>
-<% current_user.books.each do |b| %>
-<%= b.title %><br>
-<%= b.pages %><br>
-<% end %>
-<% end %>
-<%= link_to 'Add a book', new_book_path %><br>
-<%= link_to 'Edit user', edit_user_path(@user.id) %><br>
-<%= button_to 'Delete User', @user, method: :delete%>
+<body>
+
+<div id="layout" class="pure-g">
+   <%= render 'header' %>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+    	<h1> Hello <%= current_user.name %> </h2>
+    		<h2> Your books</h2>
+				<% if current_user.books %>
+				<% current_user.books.each do |b| %>
+				<%= b.title %><br>
+				<%= b.pages %><br>
+				<% end %>
+				<% end %>
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                    <ul>
+                        <li><a href="http://purecss.io/">About</a></li>
+                        <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
+                        <li><a href="http://github.com/yahoo/pure/">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

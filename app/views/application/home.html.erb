@@ -1,6 +1,28 @@
-<%= form_for :user, url: '/login'  do |f| %>
-Email:	<%= f.text_field :email %>
-Password :<%= f.password_field :password %>
-	<%= f.submit "Login" %>
-Hello world
-<% end %>
+<body>
+
+<div id="layout" class="pure-g">
+	
+    <%= render 'users/header' %>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+
+    	
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                    <ul>
+                        <li><a href="http://purecss.io/">About</a></li>
+                        <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
+                        <li><a href="http://github.com/yahoo/pure/">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

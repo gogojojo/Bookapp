@@ -5,17 +5,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+	<link rel="stylesheet" href="css/layouts/blog.css">
 </head>
 <body>
-<% if current_user %>
-	<h2> Logged in as <%= current_user.name%> <%= link_to "Logout", logout_path %> </h2>
-	<h3> <%= current_user.id %> </h3>
-<% else %>
-	<%= link_to "Login", login_path %><br>
-	<%= link_to "Sign up", signup_path %>
 
-<% end %>
 
 <%= yield %>
 

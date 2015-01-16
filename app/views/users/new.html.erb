@@ -1,3 +1,29 @@
-<h1> Create a new User </h1>
-<%= render 'userform' %>
-<%= link_to "Back to the list", users_path %>
+
+<body>
+<div id="layout" class="pure-g">
+   <%= render 'users/header' %>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+
+    	<h1> Create a new User </h1>
+			<%= render 'userform' %>
+
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                    <ul>
+                        <li><a href="http://purecss.io/">About</a></li>
+                        <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
+                        <li><a href="http://github.com/yahoo/pure/">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

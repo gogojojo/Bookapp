@@ -13,7 +13,8 @@ class UsersController < ApplicationController
  		@user = User.new(params.require(:user).permit(:name, :username, :email, :password, :password_confirmation))
 
  		if @user.save
- 			redirect_to login_path
+ 			session[:user_id] = @user.id 
+ 			redirect_to user_path(@user.id)
  		else
  			render "new"
  		end
@@ -29,6 +30,6 @@ class UsersController < ApplicationController
  	def destroy
  		@user = User.find(params[:id])
  		@user.destroy 
- 		redirect_to users_path
+ 		redirect_to root_path
  	end
 end
