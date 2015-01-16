@@ -12,6 +12,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+# installing ray gun for errors
+gem 'raygun4ruby'
 #adding 'rails_12factor'
 gem 'rails_12factor', group: :production
 # Use jquery as the JavaScript library
