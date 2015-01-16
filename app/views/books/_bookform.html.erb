@@ -1,16 +1,13 @@
 <%= form_for(@book, :html => {:class => "pure-form pure-form-aligned"}) do |u| %>
 	<fieldset>
 		<div class="pure-control-group">
-		  <%= u.label :title %> 
-		  <%= u.text_field :title %>
+		  <%= u.text_field :title, placeholder: 'title' %>
 		</div>
 		<div class="pure-control-group">
-		  <%= u.label :pages %>
-		  <%= u.text_field :pages %>
+		  <%= u.text_field :pages, placeholder: 'pages' %>
 		 </div>
 		 		<div class="pure-control-group">
-		  <%= u.label :author %>
-		  <%= u.text_field :author %>
+		  <%= u.text_field :author, placeholder: 'author' %>
 		 </div>
 		  <%= u.submit "sumbit", :class =>"pure-button pure-button-primary" %>
 		</div>
