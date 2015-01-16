@@ -15,7 +15,7 @@
 	            <%= form_for :user,:html => {:class => 'pure-form'}, url: '/login'  do |f| %>
 	            <fieldset class ='pure-group'>
 					<%= f.text_field :email, placeholder:'email', :class => 'pure-input-1' %>
-					<%= f.text_field :password, placeholder:'password', :class => 'pure-input-1' %>
+					<%= f.password_field :password, placeholder:'password', :class => 'pure-input-1' %>
 				</fieldset>
 					<%= f.submit "Login", :class => "pure-button pure-input-1 pure-button-primary" %>
 				<% end %>
