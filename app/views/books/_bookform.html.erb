@@ -1,0 +1,14 @@
+<%= form_for(@book, :html => {:class => "pure-form pure-form-aligned"}) do |u| %>
+	<fieldset>
+		<div class="pure-control-group">
+		  <%= u.label :title %> 
+		  <%= u.text_field :title %>
+		</div>
+		<div class="pure-control-group">
+		  <%= u.label :pages %>
+	
+		 </div>
+		  <%= u.submit "sumbit", :class =>"pure-button pure-button-primary" %>
+		</div>
+		<% end %>s
+  	</fieldset>

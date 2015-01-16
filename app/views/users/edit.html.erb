@@ -1,1 +1,16 @@
-<%= render 'userform' %>
+<%= form_for(@user, :html => {:class => "pure-form pure-form-aligned"}) do |u| %>
+	<fieldset>
+		<div class="pure-control-group">
+		  <%= u.label :name %> 
+		  <%= u.text_field :name %>
+		</div>
+		<div class="pure-control-group">
+		  <%= u.label :username %>
+		  <%= u.text_field :username %>
+		 </div>
+		 <div class="pure-control-group">
+		  <%= u.label :email %>
+		  <%= u.text_field :email %>
+		</div>  
+	</fieldset>
+<% end %>
