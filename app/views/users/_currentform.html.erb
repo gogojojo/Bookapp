@@ -1,0 +1,7 @@
+<%= form_for @current, :html => {:class => 'pure-form'}, url: new_current_path  do |c| %>
+	<fieldset class ='pure-group'>
+		<%= c.text_field :title, placeholder:'title', :class => 'pure-input-1' %>
+		<%=c.text_field :author, placeholder:'author', :class => 'pure-input-1' %>
+	</fieldset>
+		<%= c.submit "Login", :class => "pure-button pure-input-1 pure-button-primary" %>
+<% end %>

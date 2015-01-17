@@ -9,6 +9,7 @@ class User
   has_and_belongs_to_many :books
 
   embeds_many :lists
+  embeds_one :current
 
   has_secure_password
 
