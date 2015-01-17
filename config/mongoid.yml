@@ -69,8 +69,6 @@ test:
         retry_interval: 0
 
 production:
-  options:
-    raise_not_found_error: false
  sessions:
    default:
      # The standard MongoDB connection URI allows for easy
@@ -108,3 +106,6 @@ production:
        # If you're running a lot of threads, you may consider increasing pool_size
        # to the number of threads you're running e.g.
        # poolsize: <%= ENV['NUM_THREADS'] %>
+        
+      # options:
+        # raise_not_found_error: false
