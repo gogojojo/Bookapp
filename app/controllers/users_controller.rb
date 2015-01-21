@@ -5,6 +5,11 @@ class UsersController < ApplicationController
  	end
  	def show 
  		@user = User.find(params[:id])
+ 		if current_user.current
+	 		@math = current_user.current.pages_read
+	 		@math2 = current_user.current.pages
+	 		@answer = (@math/@math2)*100
+ 		end
  	end
  	def new
  		@user = User.new
@@ -31,5 +36,9 @@ class UsersController < ApplicationController
  		@user = User.find(params[:id])
  		@user.destroy 
  		redirect_to root_path
+ 	end
+ 	def progress 
+ 		@math = (current_user.current.pages_read/current_user.current.page)
+ 		@hello = 'hello'
  	end
 end
