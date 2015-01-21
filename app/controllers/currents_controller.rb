@@ -1,13 +1,14 @@
 class CurrentsController < ApplicationController
 		before_action :authorize
-	# def index
- # 		@books = Book.all
- # 	end
- # 	def show 
- # 		@book = Book.find(params[:id])
- # 	end
- 	def new
- 		@current =  current_user.current = Current.new
+	def new 
+		@current = Current.new
+	end
+	def create
+		current_user.current = Current.new(params.require(:current).permit(:title, :author, :pages, :pages_read))
+			redirect_to user_path(current_user)
+	end
+ 	def edit
+ 		@current =  current_user.current
  	end
  	def update
  		current_user.current = Current.new(params.require(:current).permit(:title, :author, :pages, :pages_read))
