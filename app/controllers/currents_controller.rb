@@ -4,8 +4,15 @@ class CurrentsController < ApplicationController
 		@current = Current.new
 	end
 	def create
-		current_user.current = Current.new(params.require(:current).permit(:title, :author, :pages, :pages_read))
+		@current = Current.new(params.require(:current).permit(:title, :author, :pages, :pages_read))
+		if @current.save
+			current_user.current = @current
+			flash[:success] = 'Added a currently reading book'
 			redirect_to user_path(current_user)
+		else
+			flash.now[:error] = @current.errors.full_messages.to_sentence
+			render :new
+		end
 	end
  	def edit
  		@current =  current_user.current

@@ -7,4 +7,10 @@ class Current
   field :completed, type: Mongoid::Boolean
 
   embedded_in :user
+
+  validates :title, presence: true
+  validates :author, presence: true
+  validates :pages_read, presence: true
+  validates :pages, presence: true
+
 end

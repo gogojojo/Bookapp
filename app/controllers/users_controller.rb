@@ -20,9 +20,11 @@ class UsersController < ApplicationController
  		@user = User.new(params.require(:user).permit(:name, :username, :email, :password, :password_confirmation))
 
  		if @user.save
+ 			flash[:success] = 'Login Sucessful'
  			session[:user_id] = @user.id 
  			redirect_to user_path(@user.id)
  		else
+ 			flash[:error] = @user.errors.full_messages.to_sentence
  			render "new"
  		end
  	end
