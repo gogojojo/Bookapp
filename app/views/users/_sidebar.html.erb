@@ -13,6 +13,9 @@
 	                     <li class="nav-item">
 	                        <%= link_to "Add Lists",new_list_path,:class => "pure-button" %>
 	                    </li>
+	                     <li class="nav-item">
+	                        <%= link_to "Home",user_path(current_user.id),:class => "pure-button" %>
+	                    </li>
 	                </ul>
             <% else %>
 	            <%= form_for :user,:html => {:class => 'pure-form'}, url: '/login'  do |f| %>
