@@ -5,7 +5,8 @@ class CurrentsController < ApplicationController
 	end
 	def create
 		@current = Current.new(params.require(:current).permit(:title, :author, :pages, :pages_read))
-		if @current.save
+		current_user.current = @current
+		if current_user.current.save
 			current_user.current = @current
 			flash[:success] = 'Added a currently reading book'
 			redirect_to user_path(current_user)
