@@ -1,4 +1,4 @@
-<%= form_for(@user, :html => {:class => "pure-form pure-form-aligned"}) do |u| %>
+<%= form_for(@user, :html => {:class => "pure-form pure-form-aligned"},  url: '/signup') do |u| %>
 	<fieldset>
 		<%= render 'layouts/error' %>
 		<div class="pure-control-group"> 

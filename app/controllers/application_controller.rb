@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   def home
     @books = Book.all
+    @user = User.new
   end
   def current_user 
   	@current_user ||= User.find(session[:user_id]["$oid"]) if session[:user_id]
