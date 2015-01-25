@@ -6,7 +6,6 @@
 
   <%= form_for @current, :html => {:class => 'pure-form'}  do |c| %>
 	<fieldset class ='pure-group'>
-		<%= render 'layouts/error' %>
 		<%= c.text_field :title, placeholder:'title', :class => 'pure-input-1-2' %>
 		<%=c.text_field :author, placeholder:'author', :class => 'pure-input-1-2' %>
 		<%=c.text_field :pages_read, placeholder:'pages read', :class => 'pure-input-1-2' %>

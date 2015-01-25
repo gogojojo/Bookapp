@@ -13,7 +13,7 @@ class BooksController < ApplicationController
  		@book = Book.new(params.require(:book).permit(:title, :pages, :author))
 
  		if @book.save
- 			redirect_to user_path(current_user.id)
+ 			redirect_to books_path
  			@book.user_ids.push(current_user.id)
  			current_user.books.push(@book)
  		else
