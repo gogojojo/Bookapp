@@ -6,7 +6,7 @@
     <div class="content pure-u-1 pure-u-md-3-4">
          <!-- currently reading books -->
         <div id='currently_reading'>
-        <h2> Currently Reading </h2>
+        <h1> Currently Reading </h1>
         <% if current_user.current %>
         <div class='pure-g'>
             <div class='pure-u-1-3'>
@@ -28,9 +28,13 @@
         <%=button_to 'add a currently reading book', new_current_path, :class => "pure-button pure-button-primary button-large", :method => :get %>
          <% end %>
      </div>
+     <br>
+     <br>
+     <br>
+     <br>
          <!-- recently read books -->
          <div id= 'recently read'>
-			<h2> <%= current_user.name %>'s Recently Read Books </h2>
+			<h1> <%= current_user.name %>'s Recently Added Books </h1>
                 <div class="pure-g">
                     <div class="pure-u-1-3">
                         <% if current_user.books[-1] %>
@@ -52,7 +56,14 @@
                     </div>
                 </div>
             </div>
-
+            <br>
+            <br>
+            <br>
+            <nbr>
+        <div id="My Wishlist" >
+            <h1> <%= current_user.name %>'s Wishlist </h1>
+            <%=button_to 'Add Books To Your Wishlist', new_current_path, :class => "pure-button pure-button-primary button-large", :method => :get %>
+        </div>
     </div>
 </div>
 
@@ -62,4 +73,3 @@
 
 
 </body>
-</html>

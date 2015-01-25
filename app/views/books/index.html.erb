@@ -1,8 +1,43 @@
-User's Books
-You have read a total of <% @books.length %>
-<% @books.each do |x| %>
-	<%= x.title %>
-	<%= x.author %>
-<% end %>
 
 <%= link_to "Add Books",new_book_path,:class => "pure-button" %>
+<body>
+
+<div id="layout" class="pure-g">
+   <%= render 'users/sidebar' %>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+    	<div class='pure-u-1 pure-u-md-12-24'>
+    		<h1 id="center"> Available Books </h1> <br>
+				<% @books.each do |x| %>
+				<h2>
+					<%= x.title %>
+				<h2>
+				<h3>
+					<%= x.author %>
+				</h3>
+				<%= link_to "More info", book_path(x.id), :class =>"pure-button" %>
+				<% end %>
+    	</div>
+    	<div class='pure-u-1 pure-u-md-11-24'>
+    		<h1 id='center'> Your Books</h1>
+    		<br>
+    		<% if current_user.books %>
+    			<% current_user.books.each do |x| %>
+				<h2>
+					<%= x.title %>
+				<h2>
+				<h3>
+					<%= x.author %>
+				</h3>
+				<%= link_to "More info", book_path(x.id), :class =>"pure-button" %>
+				<% end %>
+				<% end %>
+				<br>
+				<br>
+				<div id="center">
+    				<%= button_to "Add Books",new_book_path,:class => "pure-button pure-button-primary", :method => :get %>
+   				 </div>
+    </div>
+   </div>
+
+</body>
