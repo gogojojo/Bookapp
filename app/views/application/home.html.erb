@@ -1,21 +1,29 @@
-<body id="light_blue">
-
-
-        <%= image_tag("Bookbooks.jpg", :alt => "Bookbooks feed")%>
-        <div id="layout" class="pure-g">
-        <div class="pure-u-1-2" >
-            <%= form_for :user,:html => {:class => 'pure-form'}, url: '/login'  do |f| %>
-                <fieldset class ='pure-group'>
+<div class="pure-g">
+    <div class="pure-u-1 pure-u-md-2-24"> ... </div>
+    <div class="pure-u-1 pure-u-md-20-24 borderbot"> 
+        <%= image_tag("Bookbooks.jpg", :alt => "Bookbooks header img", :width => 1198)%>
+        <div class="pure-u-1 pure-u-md-11-24 " id='center'>
+            <h2> Login </h2>
+            <%= form_for :user,:html => {:class => 'pure-form pure-form-alighed'}, url: '/login'  do |f| %>
+            <fieldset>
+                <div class ='pure-control-group'>
                     <%= f.text_field :email, placeholder:'email', :class => 'pure-input-1' %>
+                </div>
+                <div class ='pure-control-group'>
                     <%= f.password_field :password, placeholder:'password', :class => 'pure-input-1' %>
-                </fieldset>
-                    <%= f.submit "Login", :class => "pure-button pure-input-1 pure-button-primary" %>
+                </div>
+                <div class ='pure-control-group'>
+                    <%= f.submit "Login", :class => "pure-button pure-button-primary pure-input-1" %>
+                </div>
+            </fieldset>
                 <% end %>
         </div>
-        <div class="pure-u-1-2">
+        <div class="pure-u-1 pure-u-md-1-24 vert"> </div>
+        <div class="pure-u-1 pure-u-md-11-24" id='center'>
+            <h2> Signup</h2>
             <%= render 'users/userform' %>
-        </div>
+        </div> </div>
+    <div class="pure-u-1 pure-u-md-2-24"> ... </div>
 </div>
+ 
 
-
-</body>

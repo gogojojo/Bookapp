@@ -7,13 +7,19 @@
 	font-weight: bold;
 	color: blue;
 }
-#light_blue {
-    background-color: #26ADE4;
-    
+#center {
+    text-align: center;
 }
 // Css for light blue button
  .button-secondary {
       background: rgb(66, 184, 221); /* this is a light blue */
+}
+.borderbot {
+    border-bottom: black solid 2px;
+}
+.vert {
+   padding-top: 100px;
+   text-align: center;
 }
 
 
