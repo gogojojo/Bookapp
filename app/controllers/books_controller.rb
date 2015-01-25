@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 		before_action :authorize
 	def index
- 		@books = Book.all
+ 		@books = current_user.books.all
  	end
  	def show 
  		@book = Book.find(params[:id])

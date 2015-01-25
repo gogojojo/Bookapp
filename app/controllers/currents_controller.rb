@@ -22,7 +22,7 @@ class CurrentsController < ApplicationController
 			redirect_to user_path(current_user)
  	end
  	def finished
- 		book = Book.new(title: current_user.current.title, author: current_user.current.title, pages: current_user.current.pages)
+ 		book = Book.new(title: current_user.current.title, author: current_user.current.author, pages: current_user.current.pages)
  		book.save
 	 		current_user.books.push(book)
 	 		current_user.current = nil

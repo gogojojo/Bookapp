@@ -1,0 +1,8 @@
+User's Books
+You have read a total of <% @books.length %>
+<% @books.each do |x| %>
+	<%= x.title %>
+	<%= x.author %>
+<% end %>
+
+<%= link_to "Add Books",new_book_path,:class => "pure-button" %>

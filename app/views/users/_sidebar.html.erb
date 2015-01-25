@@ -4,18 +4,15 @@
 			<% if current_user %>
 			  <nav class="nav">
 	                <ul class="nav-list">
-	                    <li class="nav-item">
-	                        <%= link_to "Logout",logout_path,:class => "pure-button" %>
+	                	<li class="nav-item">
+	                        <%= link_to "Home",user_path(current_user.id),:class => "pure-button" %>
 	                    </li><br>
 	                    <li class="nav-item">
-	                        <%= link_to "Add Books",new_book_path,:class => "pure-button" %>
+	                        <%= link_to "Logout",logout_path,:class => "pure-button" %>
 	                    </li>
-	                     <li class="nav-item">
-	                        <%= link_to "Add Lists",new_list_path,:class => "pure-button" %>
-	                    </li>
-	                     <li class="nav-item">
-	                        <%= link_to "Home",user_path(current_user.id),:class => "pure-button" %>
-	                    </li>
+	                    <li class="nav-item">
+	                        <%= link_to "Books",books_path,:class => "pure-button" %>
+	                    </li><br>
 	                </ul>
             <% else %>
             <%= render 'layouts/error' %>
@@ -29,7 +26,9 @@
 				<nav class="nav">
 		            <ul class="nav-list">
 		                <li class="nav-item">
-		                    <%= link_to "Sign Up",signup_path,:class => "pure-button", :id => 'wide'%>
+		                	<div id= "wide">
+		                    <%= link_to "Sign Up",signup_path,:class => "pure-button"%>
+		                </div>
 		                </li>
 	            	</ul>
 	            </nav>
