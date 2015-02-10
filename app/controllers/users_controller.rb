@@ -6,6 +6,7 @@ class UsersController < ApplicationController
  	def show 
  		@user = User.find(params[:id])
  		if current_user.current
+      # method for calculating the math for the progress bar
  			if current_user.current.pages_read && current_user.current.pages
 		 		@math = current_user.current.pages_read
 		 		@math2 = current_user.current.pages

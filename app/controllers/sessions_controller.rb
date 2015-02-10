@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 	def new 
 	end 
+	# no flash messages yet, will add them soon
 	def create
 			user = User.find_by(email: params[:user][:email])
 			if user && user.authenticate(params[:user][:password])

@@ -4,6 +4,7 @@ class CurrentsController < ApplicationController
 		@current = Current.new
 	end
 	def create
+		# no flash displayed yet, will add in the future
 		@current = Current.new(params.require(:current).permit(:title, :author, :pages, :pages_read))
 		current_user.current = @current
 		if current_user.current.save
